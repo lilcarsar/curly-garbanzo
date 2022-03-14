@@ -2,10 +2,13 @@ package disk;
 
 public class Hockey extends Puck{
 
+	public Hockey(double g) {
+		super(g);
+	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Puck p = new Puck(4.4);
 
-		System.out.println(getDivision());
+		System.out.println(p.toString());
 	}
 
 }

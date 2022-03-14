@@ -2,55 +2,52 @@ package disk;
 
 public class Puck {
 	
-	static double weight = 5.1;
-	static boolean standard;
-	static boolean youth;
 	
-	public boolean standard() {
-	
-	
-		return(standard);
-	}
-	
-	public boolean youth() {
-	
-			return(youth);
-		}
 
+
+	private double weight;
+	private boolean standard;
+	private boolean youth;
 	
-	public boolean equals(Object p){
-		Puck test = (Puck)p;
+public Puck(double g) {
 		
-		}
-	/*
-	standard = true;
-		youth = false;
-		standard = false;
-		youth = false;	
-		if(weight >= 5.0 || weight <= 5.5) 
-	{}
-	if(weight >= 4.0 || weight <= 4.5) {
+	weight = g;
+		if(weight >= 5.0 && weight <= 5.5) 
+		{
+			standard = true;
+			}
+	
+	if(weight >= 4.0 && weight <= 4.5) 
+	{
 			standard =  false;
-			youth = true;
-	*/
+	
+	}}
 
-	public static double getWeight() {
+	
+
+	public double getWeight() {
 		
 		return(weight);
 	}
 
 	
-	public static String getDivision() {
-		String rep = "";
+	public String getDivision() {
+		String rep;
 		
-		if(standard==true) {
-			return rep = "The puck is a standard";
+		if(standard) {
+			rep = "standard";
 		}
-		else if(youth==true) {
-			return rep = "The Puck is youth";
+		else{
+			rep = "youth";
 		}
 			return rep;
 	}
 	
+	public String toString() {
+		String ans;
+		
+		ans = "The puck has a weight of "+ getWeight()+ " ounces, the type of puck is "+ getDivision();
+		return ans;
+	}
 }
 
